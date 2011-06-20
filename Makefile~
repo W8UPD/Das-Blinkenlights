@@ -1,4 +1,0 @@
-CC = gcc
-
-all: morse_convert.c
-	$(CC) -o morse
