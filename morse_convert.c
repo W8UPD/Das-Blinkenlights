@@ -100,7 +100,7 @@ void perform_blink(char* text) {
   }
 }
 
-int main(int argc) {
-  perform_blink("hello world.");
+int main(int argc, char* argv[]) {
+  perform_blink(argv[1]);
   return 0;
 }
