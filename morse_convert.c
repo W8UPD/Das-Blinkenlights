@@ -50,6 +50,7 @@ char* convert(char letter) {
     case '.': return ".-.-.-";
     case ',': return "--..--";
     case '-': return "-....-";
+    case '/'; return "-..-.";
   }
 }
 
