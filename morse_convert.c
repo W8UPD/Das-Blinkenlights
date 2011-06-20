@@ -76,6 +76,9 @@ void perform_blink(char* text) {
     switch (text[i]) {
       case ' ': continue;
     }
+
+    // Print the letter first.
+    printf("%c: ", text[i]);
     
     // Convert the letter to morse, ...
     char* morseified = convert(text[i]);
