@@ -103,6 +103,12 @@ void perform_blink(char* text) {
 }
 
 int main(int argc, char* argv[]) {
-  perform_blink(argv[1]);
-  return 0;
+  if (argc > 1) {
+    perform_blink(argv[1]);
+    return 0;
+  } else {
+    printf("Usage: ./morse 'text to morse'\n");
+    return 1;
+  }
 }
+
