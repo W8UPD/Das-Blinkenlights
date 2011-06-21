@@ -75,7 +75,9 @@ void perform_blink(char* text) {
 
     // Handle special cases here.
     switch (text[i]) {
-      case ' ': continue;
+      case ' ':
+        printf("\n");
+        continue;
     }
 
     // Print the letter first.
