@@ -70,7 +70,6 @@ void blink_long() {
  */
 void perform_blink(char* text) {
   // For each letter in the text, ...
-  int i, x;
   while (*text) {
 
     // Handle special cases here.
