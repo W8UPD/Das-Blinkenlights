@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * Convert a letter (given as a C char) to a morse string of "."s and "-"s.
@@ -51,6 +52,9 @@ char* convert(char letter) {
     case ',': return "--..--";
     case '-': return "-....-";
     case '/': return "-..-.";
+    default:
+      printf("You passed a character that is not convertable. Whoops!\n");
+      exit(1);
   }
 }
 
