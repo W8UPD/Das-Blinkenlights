@@ -54,7 +54,7 @@ char* convert(char letter) {
     case '/': return "-..-.";
     default:
       printf("You passed a character that is not convertable. Whoops!\n");
-      printf("Acceptable characteres are A-Z, 0-9, , . / ?\n");
+      printf("Acceptable characters are A-Z, 0-9, , . / ?\n");
       printf("Please try again.\n");
       exit(1);
   }
