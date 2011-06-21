@@ -77,11 +77,10 @@ void perform_blink(char* text) {
   while (*text) {
 
     // Handle special cases here.
-    switch (*text) {
-      case ' ':
-        printf("\n");
-        text++;
-        continue;
+    if (*text == ' ') {
+      printf("\n");
+      text++;
+      continue;
     }
 
     // Print the letter first.
@@ -92,13 +91,10 @@ void perform_blink(char* text) {
 
     // For each char of the morse string, ...
     while (*morseified) {
-      switch (*morseified) {
-        case '.':
-          blink_short();
-          break;
-        case '-':
-          blink_long();
-          break;
+      if (*morseified == '.') {
+        blink_short();
+      } else {
+        blink_long();
       }
       morseified++;
     }
