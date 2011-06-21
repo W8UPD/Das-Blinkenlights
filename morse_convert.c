@@ -71,34 +71,37 @@ void blink_long() {
 void perform_blink(char* text) {
   // For each letter in the text, ...
   int i, x;
-  for (i = 0; i < strlen(text); i++) {
+  while (*text) {
 
     // Handle special cases here.
-    switch (text[i]) {
+    switch (*text) {
       case ' ':
         printf("\n");
+        text++;
         continue;
     }
 
     // Print the letter first.
-    printf("%c: ", text[i]);
+    printf("%c: ", *text);
     
     // Convert the letter to morse, ...
-    char* morseified = convert(text[i]);
+    char* morseified = convert(*text);
 
     // For each char of the morse string, ...
-    for (x = 0; x < strlen(morseified); x++) {
-      switch (morseified[x]) {
+    while (*morseified) {
+      switch (*morseified) {
         case '.':
           blink_short();
-          continue;
+          break;
         case '-':
           blink_long();
-          continue;
+          break;
       }
+      morseified++;
     }
     // For debugging...
     printf("\n");
+    text++;
   }
 }
 
