@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
     perform_blink(argv[1]);
     return 0;
   } else {
-    printf("Usage: ./morse 'text to morse'\n");
+    printf("Usage: ./morse 'text to enmorse'\n");
     return 1;
   }
 }
